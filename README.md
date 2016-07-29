@@ -45,5 +45,6 @@ Munin interface accessible via http://host:8888/
 - Enable more pluggins
 - Remove or move logging (apache,munin)
 - Slimstream, remove services cron/apache2
+- SMTP alerts
 
 [1]: http://munin-monitoring.org/
