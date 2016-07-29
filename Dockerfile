@@ -1,6 +1,6 @@
 FROM ubuntu:xenial
 
-MAINTAINER shaf@shaf.net
+MAINTAINER git@shaf.net
 
 ENV ALLOWED_HOSTS="127.0.0.1/32" \
 	HOSTNAME="unRAID"
