@@ -13,7 +13,7 @@ Primarily created for unRAID server but has other use cases
 
 - TZ : Timezone (default: Europe/London)
 - HOSTNAME : Rename Munin local hostname (default: unRAID)
-- ALLOWED_HOSTS : CIPR notation eg 192.168.1.0/24(class C) or 192.168.0.3/32(single host). Use If intending to monitor this host from an enternal munin server (default: 127.0.0.1/32)
+- ALLOWED_HOSTS : CIDR notation eg 192.168.1.0/24(class C) or 192.168.0.3/32(single host). Use If intending to monitor this host from an enternal munin server (default: 127.0.0.1/32)
 
 #### Ports
 

@@ -3,7 +3,8 @@ FROM ubuntu:xenial
 MAINTAINER git@shaf.net
 
 ENV ALLOWED_HOSTS="127.0.0.1/32" \
-	HOSTNAME="unRAID"
+	HOSTNAME="unRAID" \
+	TZ="Europe/London"
 
 RUN \
   apt-get update && \
