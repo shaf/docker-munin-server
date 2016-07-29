@@ -28,7 +28,7 @@ INITIAL RELEASE
 - Basic schema written from scratch, pending branch and refactor
 - Stable
 </Changes>
-  <Forum>http://lime-technology.com/forum/index.php?topic=50678.0</Forum>
+  <Support>http://lime-technology.com/forum/index.php?topic=50678.0</Support>
   <Environment>
     <Variable>
       <Name>ALLOWED_HOSTS</Name>
