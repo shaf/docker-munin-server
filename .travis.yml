@@ -1,4 +1,14 @@
 sudo: required
 
+language: ruby
+
 services:
   - docker
+
+before_install:
+  - docker build -t shaf/munin-server .
+  - docker run -d --name=munin-server -p 8888:80/tcp -v "/":"/rootfs":ro -v "/sys":"/sys":ro shaf/munin-server
+  - docker ps -a
+
+script:
+  - bundle exec rake test
