@@ -15,7 +15,7 @@
 [b]TZ :[/b] Timezone already being passed by unRAID[br]&#13;
 </Description>
   <Registry>https://registry.hub.docker.com/u/shaf/munin-server/</Registry>
-  <Repository>shaf/munin-server-test</Repository>
+  <Repository>shaf/munin-server</Repository>
   <Beta>False</Beta>
   <Category>Network:Management Tools:</Category>
   <Date>2016-07-29</Date> 
