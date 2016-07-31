@@ -24,7 +24,7 @@ Override environment and volume mappings
 - `HOSTNAME`
 	- Rename Munin local hostname from localhost.localdomain (default: unRAID)
 - `ALLOWED_HOSTS`
-	- CIDR notation eg 192.168.1.0/24(class C) or 192.168.0.3/32(single host). Use If intending to monitor this host from an enternal munin server (default: 127.0.0.1/32)
+	- CIDR notation eg 192.168.1.0/24(class C) or 192.168.0.3/32(single host). Use If intending to monitor this host from an external munin server (default: 127.0.0.1/32)
 
 #### Volumes
 
