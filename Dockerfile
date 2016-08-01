@@ -28,4 +28,7 @@ ADD payload/apache24.conf /etc/munin/
 
 EXPOSE 80 4949
 
+# Define data volumes
+VOLUME ["/etc/munin/munin-conf.d", "/var/cache/munin/www", "/var/lib/munin"]
+
 CMD ["/start.sh"]
