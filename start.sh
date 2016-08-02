@@ -11,7 +11,7 @@ if [ ! -z ${HOSTNAME+x} ]; then
 fi
 
 # Set timezone if supplied ENV:TV is valid
-if [ -e /usr/share/zoneinfo/$TZ ]; then
+if [ -f /usr/share/zoneinfo/$TZ ]; then
 	rm /etc/localtime
 	ln -s /usr/share/zoneinfo/$TZ /etc/localtime
 fi
