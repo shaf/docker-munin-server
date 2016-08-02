@@ -78,4 +78,6 @@ Munin interface accessible via http://host:8888/
 - SMTP alerts
 - Slimstream, compile into alpine linux
 
+**[Changelog](Changelog)**
+
 [1]: http://munin-monitoring.org/

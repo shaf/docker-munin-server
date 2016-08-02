@@ -1,0 +1,11 @@
+2016.08.02
+------------
+- Updated Travis tests, minor changes
+
+2016.07.30
+------------
+- Addition of munin conf.d volume allowing users to append custom configuration for munin
+
+2016.07.29
+------------
+- Initial Release

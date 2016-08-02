@@ -22,6 +22,7 @@ if [ ! -e /var/cache/munin/www/index.html ]; then
 fi
 
 munin-node-configure --remove --shell | sh
-/etc/init.d/apache2 start
-/etc/init.d/cron start
+service cron start
+a2enmod cgid
+service apache2 start
 exec /usr/sbin/munin-node --config /etc/munin/munin-node.conf

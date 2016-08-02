@@ -12,3 +12,4 @@ before_install:
 
 script:
   - docker ps | grep -q shaf/munin-server
+  - curl -sI http://$(docker inspect --format '{{ .NetworkSettings.IPAddress }}' munin-server)/munin-cgi/munin-cgi-graph/test | grep -q 'Content-Type: image/png'
