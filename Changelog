@@ -1,3 +1,7 @@
+2016.10.18
+------------
+- Trigger rebuild based on Xenial patches
+
 2016.08.02
 ------------
 - Updated Travis tests, minor changes
