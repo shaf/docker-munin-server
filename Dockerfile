@@ -4,7 +4,8 @@ MAINTAINER git@shaf.net
 
 ENV ALLOWED_HOSTS="127.0.0.1/32" \
 	HOSTNAME="unRAID" \
-	TZ="Europe/London"
+	TZ="Europe/London" \
+	BUILD_TRIGGED="2017-07-25 01:37"
 
 RUN \
 	apt-get update && \
