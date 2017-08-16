@@ -5,11 +5,12 @@ MAINTAINER git@shaf.net
 ENV ALLOWED_HOSTS="127.0.0.1/32" \
 	HOSTNAME="unRAID" \
 	TZ="Europe/London" \
+	SMTP_RELAY="10.0.0.1" \
 	BUILD_TRIGGED="2017-07-25 01:37"
 
 RUN \
 	apt-get update && \
-	DEBIAN_FRONTEND=noninteractive apt-get install -y munin apache2 lm-sensors && \
+	DEBIAN_FRONTEND=noninteractive apt-get install -y munin apache2 lm-sensors postfix&& \
 	apt-get clean && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/* && \
 	sed -ri 's/^log_file.*/# \0/; \
 			s/^pid_file.*/# \0/; \
@@ -25,6 +26,7 @@ RUN \
 
 ADD start.sh /
 ADD payload/apache24.conf /etc/munin/
+ADD payload/main.cf /etc/postfix//
 
 EXPOSE 80 4949
 

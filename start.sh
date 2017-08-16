@@ -10,6 +10,11 @@ if [ ! -z ${HOSTNAME+x} ]; then
 	sed -ie 's@localhost.localdomain@'"$HOSTNAME"'@g' /etc/munin/munin.conf
 fi
 
+# Apply user defined smtp_relay from ENV
+if [ ! -z ${SMTP_RELAY+x} ]; then
+	sed -ie 's@RELAYHOST@'"$SMTP_RELAY"'@g' /etc/postfix/main.cf
+fi
+
 # Set timezone if supplied ENV:TV is valid
 if [ -f /usr/share/zoneinfo/$TZ ]; then
 	rm /etc/localtime
@@ -23,6 +28,7 @@ fi
 
 munin-node-configure --remove --shell | sh
 service cron start
+service postfix start
 a2enmod cgid
 service apache2 start
 exec /usr/sbin/munin-node --config /etc/munin/munin-node.conf

@@ -21,6 +21,8 @@ Override environment and volume mappings
 
 - `TZ`
 	- Timezone (default: Europe/London)
+- `SMTP_RELAY`
+	- IP/Hostnmae for an external relay
 - `HOSTNAME`
 	- Rename Munin local hostname from localhost.localdomain (default: unRAID)
 - `ALLOWED_HOSTS`
