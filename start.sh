@@ -15,10 +15,10 @@ if [ ! -z ${SMTP_RELAY+x} ]; then
 	sed -ie 's@RELAYHOST@'"$SMTP_RELAY"'@g' /etc/postfix/main.cf
 fi
 
-# Set timezone if supplied ENV:TV is valid
-if [ -f /usr/share/zoneinfo/$TZ ]; then
+# Set timezone if supplied ENV{TZ} is valid
+if [ -f "/usr/share/zoneinfo/$TZ" ]; then
 	rm /etc/localtime
-	ln -s /usr/share/zoneinfo/$TZ /etc/localtime
+	ln -s "/usr/share/zoneinfo/$TZ" /etc/localtime
 fi
 
 # Create holding page if no stats are available
