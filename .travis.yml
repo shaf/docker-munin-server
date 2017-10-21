@@ -10,15 +10,15 @@ env:
 before_install:
   - docker run --rm --privileged multiarch/qemu-user-static:register --reset
   - docker build -t shaf/munin-server .
-  - docker build -t shaf/munin-server:rpi-zero -f Dockerfile-rpi-zero .
+#  - docker build -t shaf/munin-server:rpi-zero -f Dockerfile-rpi-zero .
   - docker run -d --name=munin-server -p 8888:80/tcp -v /:/rootfs:ro -v /sys:/sys:ro shaf/munin-server
-  - docker run -d --name=munin-server -p 8889:80/tcp -v /:/rootfs:ro -v /sys:/sys:ro shaf/munin-server:rpi-zero
+#  - docker run -d --name=munin-server -p 8889:80/tcp -v /:/rootfs:ro -v /sys:/sys:ro shaf/munin-server:rpi-zero
   - docker ps -a
 
 script:
   - docker ps | grep -q shaf/munin-server
-  - docker ps | grep -q shaf/munin-server:rpi-zero
+#  - docker ps | grep -q shaf/munin-server:rpi-zero
 #  - ./t/build-test.sh
 
-after_success:
-    - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" && docker push $DOCKER_REPO
+# after_success:
+#     - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" && docker push $DOCKER_REPO
